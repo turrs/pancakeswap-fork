@@ -4,7 +4,7 @@
 
 import { init, GlobalHandlers, Breadcrumbs, Dedupe } from '@sentry/react'
 
-const SENTRY_DSN = 'https://a71bbfb066a54420ac90f7e3ba926b34@o1367120.ingest.sentry.io/6769013'
+const SENTRY_DSN = process.env.SENTRY_DSN || process.env.NEXT_PUBLIC_SENTRY_DSN
 
 const isUserRejected = (err) => {
   // provider user rejected error code

@@ -24,7 +24,7 @@ const sentryWebpackPluginOptions =
       }
     : {
         silent: true, // Suppresses all logs
-        dryRun: !process.env.SENTRY_AUTH_TOKEN,
+        dryRun: process.env.VERCEL_ENV !== 'production',
       }
 
 /** @type {import('next').NextConfig} */
