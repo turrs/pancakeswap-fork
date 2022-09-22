@@ -19,12 +19,16 @@ const sentryWebpackPluginOptions =
         //   urlPrefix, include, ignore
         silent: false, // Logging when deploying to check if there is any problem
         validate: true,
+        url: process.env.SENTRY_URL,
+        org: process.env.SENTRY_ORG,
+        project: process.env.SENTRY_PROJECT,
+        authToken: process.env.SENTRY_AUTH_TOKEN,
         // For all available options, see:
         // https://github.com/getsentry/sentry-webpack-plugin#options.
       }
     : {
         silent: true, // Suppresses all logs
-        dryRun: process.env.VERCEL_ENV !== 'production',
+        dryRun: !process.env.SENTRY_AUTH_TOKEN,
       }
 
 /** @type {import('next').NextConfig} */
