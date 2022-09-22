@@ -97,7 +97,7 @@ export function SwapCallbackError({ error }: { error: string }) {
   return (
     <SwapCallbackErrorInner>
       <SwapCallbackErrorInnerAlertTriangle>
-        <ErrorIcon width="24px" />
+        <ErrorIcon width="26px" />
       </SwapCallbackErrorInnerAlertTriangle>
       <p>{error}</p>
     </SwapCallbackErrorInner>
